@@ -3,14 +3,25 @@ string[] arr1 = {"hello","2","world","world",":-)" };
 string[] arr2 = { "1234", "1567", "-2", "computer science" };
 string[] arr3 = { "Russia", "Denmark", "Kazan" };
 
-Console.WriteLine(GetString(arr1));
+Console.WriteLine("Вывод массива arr1 до фильтрации");
+WriteArr(arr1);
+arr1 = GetString(arr1).Split(',');
+Console.WriteLine("Вывод массива arr1 после фильтрации");
+WriteArr(arr1);
 
-static string GetString(string [] arr)
+
+static void WriteArr(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]}, ");
+    }
+}
+    static string GetString(string [] arr)
 {
     string strArr="";
     for(int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine($"Строка {arr[i]} имеет длину: {arr[i].Length}");
 
         if (arr[i].Length <= 3)
         {
