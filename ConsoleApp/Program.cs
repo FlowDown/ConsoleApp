@@ -10,11 +10,14 @@ static string GetString(string [] arr)
     string strArr="";
     for(int i = 0; i < arr.Length; i++)
     {
+        Console.WriteLine($"Строка {arr[i]} имеет длину: {arr[i].Length}");
+
         if (arr[i].Length <= 3)
         {
-            strArr = strArr + arr[i] + ",";
-        }
-        if (strArr != "") strArr = strArr.Remove(strArr.Length-1);
+            
+            strArr = strArr + (string)arr[i] + ",";
+        } 
     }
+    if (strArr != "") strArr = strArr.Remove(strArr.Length - 1);
     return strArr;
 }
