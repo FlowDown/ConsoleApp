@@ -8,7 +8,16 @@ WriteArr(arr1);
 arr1 = GetString(arr1).Split(',');
 Console.WriteLine("Вывод массива arr1 после фильтрации");
 WriteArr(arr1);
-
+Console.WriteLine("Вывод массива arr2 до фильтрации");
+WriteArr(arr2);
+arr1 = GetString(arr2).Split(',');
+Console.WriteLine("Вывод массива arr2 после фильтрации");
+WriteArr(arr2);
+Console.WriteLine("Вывод массива arr3 до фильтрации");
+WriteArr(arr3);
+arr1 = GetString(arr1).Split(',');
+Console.WriteLine("Вывод массива arr3 после фильтрации");
+WriteArr(arr3);
 
 static void WriteArr(string[] arr)
 {
